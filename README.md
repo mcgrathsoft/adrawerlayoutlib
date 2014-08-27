@@ -14,7 +14,9 @@ ZDrawerLayout - Extends ADrawerLayout.  ZDrawerLayout acomplished a specific men
 The layout which contains a ZDrawerLayout should look something like this (pseudo, see activity_main.xml for an actual layout used in sample activity MainActivity):
 
 ZDrawerLayout
+
   LinearLayout       <---- layout containing menu items which appear behind the content until drawer opens
+  
   ScrollView         <---- content sits inside the ScrollView
   
 
