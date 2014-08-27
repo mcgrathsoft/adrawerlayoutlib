@@ -21,6 +21,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.ScrollView;
 
 public class ZDrawerLayout extends ADrawerLayout {
 
@@ -198,17 +199,21 @@ public class ZDrawerLayout extends ADrawerLayout {
       * of the menu items.
       */
 	private void readViews() {
-		// mContent = getChildAt(0);
 		mContent = null;
 		for (int i = 0, count = getChildCount(); i < count; i++) {
 			View v = getChildAt(i);
-			if (v.getId() == R.id.adrawer_scrollview) {
+            /*
+             * we assume here that our layout only contains a single ScrollView
+             * and that ScrollView is our content.
+             */
+            if(v instanceof ScrollView) {
 				// there should only be one of ScrollView in our ADrawerLayout
 				mContent = v;
 				continue;
 			}
-			if (v.getId() == DIMMER_VIEW_ID)
-				continue;
+
+			//if (v.getId() == DIMMER_VIEW_ID)
+			//	continue;
 
 			LayoutParams params = (LayoutParams) v.getLayoutParams();
 			switch (params.gravity) {
