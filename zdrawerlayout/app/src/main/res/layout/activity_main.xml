@@ -1,0 +1,54 @@
+<com.upsideideas.zdrawerlayout.ZDrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/zdrawerlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/menulayout"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:gravity="center"
+        android:background="#111" >
+
+        <ListView
+            android:id="@+id/menulist"
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:choiceMode="singleChoice"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/adrawer_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:background="#ff000000" >
+
+        <LinearLayout
+            android:id="@+id/content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="5sp">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:text="The Main Content goes here"
+                android:textSize="40sp"
+                android:textColor="#ffffffff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="8dp"/>
+        </LinearLayout>
+    </ScrollView>
+</com.upsideideas.zdrawerlayout.ZDrawerLayout>
