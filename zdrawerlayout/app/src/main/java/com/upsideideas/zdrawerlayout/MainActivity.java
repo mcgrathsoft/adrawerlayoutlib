@@ -2,12 +2,14 @@ package com.upsideideas.zdrawerlayout;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -16,6 +18,7 @@ public class MainActivity extends ActionBarActivity {
     public String[] mMenuStrings;
     private ListView menuList;
     private ZDrawerLayout drawerLayout;
+    private TextView textSourceCodeLink;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +51,10 @@ public class MainActivity extends ActionBarActivity {
             }
 
         });
+
+        // make the textview for source code link clickable
+        textSourceCodeLink = (TextView) findViewById(R.id.textSourceCodeLink);
+        textSourceCodeLink.setMovementMethod(LinkMovementMethod.getInstance());
     }
 
 

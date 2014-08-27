@@ -34,21 +34,40 @@
         <LinearLayout
             android:id="@+id/content_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
+            android:gravity="center|center_horizontal"
             android:orientation="vertical"
-            android:gravity="center_horizontal"
             android:padding="5sp">
 
             <TextView
                 android:id="@+id/textView1"
-                android:text="The Main Content goes here"
+                android:text="This is the 'content_layout'.  You can inflate activity layouts or fragments here as you please."
                 android:textSize="40sp"
                 android:textColor="#ffffffff"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:layout_gravity="center|center_vertical"
+                android:gravity="center"
                 android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:textSize="16sp"
+                android:textColor="#ffffffff"
+                android:text="Source code :"/>
+
+            <TextView
+                android:id="@+id/textSourceCodeLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#ffffffff"
+                android:autoLink="web"
+                android:text="https://github.com/mcgrathsoft/adrawerlayoutlib"
+                />
         </LinearLayout>
     </ScrollView>
 </com.upsideideas.zdrawerlayout.ZDrawerLayout>
