@@ -11,4 +11,15 @@ ADrawerLayout - A Generic Drawer Layout (with minor changes to allow for extendi
 
 ZDrawerLayout - Extends ADrawerLayout.  ZDrawerLayout acomplished a specific menu effect where the menu items sit behind the content and grow forward as the drawer is scrolled open.
 
-MainActivity - Sample activity that uses ZDrawerLayout
+The layout which contains a ZDrawerLayout should look something like this (pseudo, see activity_main.xml for an actual layout used in sample activity MainActivity):
+
+<ZDrawerLayout>
+
+  <LinearLayout/>       <---- layout containing menu items which appear behind the content until drawer opens
+
+  <ScrollView/>         <---- content sits inside the ScrollView
+  
+</ZDrawerLayout>
+
+
+MainActivity - Sample activity that uses ZDrawerLayout.  A minimalist activity which contains a listview holding the menu items and a layout with a single textview (activity_main.xml) as the content.
