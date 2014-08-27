@@ -16,6 +16,7 @@ The layout which contains a ZDrawerLayout should look something like this (pseud
 ZDrawerLayout
 
 ----LinearLayout       <---- layout containing menu items which appear behind the content until drawer opens
+
 ----ScrollView         <---- content sits inside the ScrollView
   
 
