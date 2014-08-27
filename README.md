@@ -15,9 +15,8 @@ The layout which contains a ZDrawerLayout should look something like this (pseud
 
 ZDrawerLayout
 
-  LinearLayout       <---- layout containing menu items which appear behind the content until drawer opens
-  
-  ScrollView         <---- content sits inside the ScrollView
+----LinearLayout       <---- layout containing menu items which appear behind the content until drawer opens
+----ScrollView         <---- content sits inside the ScrollView
   
 
 MainActivity - Sample activity that uses ZDrawerLayout.  A minimalist activity which contains a listview holding the menu items and a layout with a single textview (activity_main.xml) as the content.
